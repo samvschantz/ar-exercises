@@ -10,6 +10,15 @@ puts "Exercise 7"
 puts "----------"
 
 # Your code goes here ...
+puts "What store do you want to add to the database"
+
+userStore = gets.chomp
+
+userStore = Store.create(name: userStore)
+
+userStore.errors.messages.each do |message|
+  puts message
+end
 
 
 # 1. Add validations to two models to enforce the following business rules:
