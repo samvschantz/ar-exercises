@@ -12,6 +12,10 @@ Surrey = Store.create(name: 'Surrey', annual_revenue: 224000, womens_apparel: tr
 Whistler = Store.create(name: 'Whistler', annual_revenue: 1900000, mens_apparel: true, womens_apparel: false)
 Yaletown = Store.create(name: 'Yaletown', annual_revenue: 430000, womens_apparel: true, mens_apparel: true)
 
+@store3 = Store.find(4)
+@store4 = Store.find(5)
+@store5 = Store.find(6)
+
 @mens_stores = Store.where(mens_apparel: true)
 
 @womens_low_performing_stores = Store.where("womens_apparel = true AND annual_revenue < 1000000")
